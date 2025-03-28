@@ -1,6 +1,7 @@
 const myLibrary = []
 
-function Book(title,author,pages,read){
+class Book{
+    constructor(title,author,pages,read){
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -9,9 +10,12 @@ function Book(title,author,pages,read){
 
 }
 
-Book.prototype.toggleReadStatus = function(){
+    toggleReadStatus(){
     this.read = this.read === "Read" ? "Not Read" : "Read";
 };
+
+}
+
 
 function addBookToLibrary(title,author,pages,read){
     const newBook = new Book(title,author,pages,read);
